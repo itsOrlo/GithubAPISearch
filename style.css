@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2a2a72; 
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  overflow: hidden;
+  margin: 0;
+  text-align: center; /* Centrar el texto en la pantalla */
+}
+
+h1 { /* Estilo para el título principal (si lo tienes) */
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 2rem; /* Espacio entre el formulario y las tarjetas */
+}
+
+.user-form input {
+  width: calc(100% - 120px); /* Ajustar el ancho para el botón */
+  display: inline-block; /* Permitir que el botón esté al lado */
+  background-color: #4c2885;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  margin-right: 1rem; /* Espacio entre el input y el botón */
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.user-form input:hover {
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 7px 14px rgba(154, 160, 185, 0.1),
+    0 21px 56px rgba(0, 0, 0, 0.15);
+}
+
+.user-form input::placeholder {
+  color: #bbb;
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.user-form button { /* Estilo para el botón de búsqueda */
+  display: inline-block;
+  background-color: #218838; /* Color verde para el botón */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form button:hover {
+  background-color: #1e7e34; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(154, 160, 185, 0.1),
+    0 21px 56px rgba(0, 0, 0, 0.15);
+}
+
+#main {
+  margin-top: 2rem;
+  display: grid; /* Usar grid para organizar las tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptar el número de columnas */
+  gap: 2rem;
+}
+
+.card {
+  max-width: 100%; /* Ajustar el ancho máximo de la tarjeta */
+  background-color: #4c2885;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 2rem; /* Ajustar el padding para mejor espacio */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 7px 14px rgba(154, 160, 185, 0.1),
+    0 21px 56px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #2a2a72;
+  height: 150px;
+  width: 150px;
+  object-fit: cover; /* Asegurar que la imagen se ajuste al contenedor */
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+  justify-content: flex-start; 
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem; /* Espacio entre los elementos de la lista */
+  margin-bottom: 0.5rem;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  color: #fff;
+  background-color: #218838; /* Color verde para los repos */
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-radius: 5px; /* Bordes redondeados para los repos */
+  transition: all 0.3s ease;
+}
+
+.repo:hover {
+  background-color: #1e7e34; /* Color más oscuro al pasar el mouse */
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-info {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+
+  .user-form input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .user-form button {
+    width: 100%;
+  }
+}

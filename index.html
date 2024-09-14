@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Buscador de Perfiles de GitHub</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Encuentra Desarrolladores en GitHub</h1>
+      <p class="description">
+        Busca perfiles de usuarios de GitHub y obtén información relevante sobre
+        sus proyectos y contribuciones.
+      </p>
+
+      <form class="user-form" id="form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Ingresa un nombre de usuario de GitHub"
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Creado por @itsOrlo...</p>
+      </div>
+
+      <main id="main"></main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
